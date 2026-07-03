@@ -1,0 +1,13 @@
+name: Publish
+# Triggered when a git tag matching v* is pushed (which happens when a draft
+# release is published from the GitHub Releases page).
+on:
+  push:
+    tags: ['v*']
+
+jobs:
+  publish:
+    uses: AustralianCancerDataNetwork/cava-devops/.github/workflows/publish.yml@main
+    with:
+      repository-url: 'https://test.pypi.org/legacy/'
+      environment: 'testpypi'

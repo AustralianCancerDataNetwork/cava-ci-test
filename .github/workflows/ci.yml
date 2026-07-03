@@ -1,0 +1,11 @@
+name: CI
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  label-gate:
+    uses: AustralianCancerDataNetwork/cava-devops/.github/workflows/label-gate.yml@main
+
+  build-test:
+    uses: AustralianCancerDataNetwork/cava-devops/.github/workflows/build-test.yml@main

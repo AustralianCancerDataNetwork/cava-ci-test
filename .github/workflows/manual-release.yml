@@ -1,0 +1,20 @@
+name: Manual Release
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version to release (e.g. 0.1.0 — no leading v)
+        required: true
+        type: string
+      prerelease:
+        description: Mark as pre-release
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  release:
+    uses: AustralianCancerDataNetwork/cava-devops/.github/workflows/manual-release.yml@main
+    with:
+      version: ${{ inputs.version }}
+      prerelease: ${{ inputs.prerelease }}

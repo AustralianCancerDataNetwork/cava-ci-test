@@ -1,0 +1,10 @@
+name: Release Draft
+# Keeps the draft release up to date when PRs are opened or re-labelled.
+on:
+  pull_request:
+    types: [opened, reopened, labeled, unlabeled]
+
+jobs:
+  draft:
+    uses: AustralianCancerDataNetwork/cava-devops/.github/workflows/release-drafter.yml@main
+    secrets: inherit

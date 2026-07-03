@@ -1,0 +1,26 @@
+[build-system]
+requires = ["uv-dynamic-versioning"]
+build-backend = "uv_dynamic_versioning.backend"
+
+[tool.uv-dynamic-versioning]
+vcs = "git"
+style = "pep440"
+tag-pattern = "v?(?P<base>\\d+\\.\\d+\\.\\d+)"
+fallback-version = "0.0.0"
+
+[project]
+name = "cava-ci-test"
+dynamic = ["version"]
+description = "Minimal package for end-to-end validation of cava-devops CI/CD pipelines."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.uv]
+cache-keys = [{ file = "pyproject.toml" }, { git = { commit = true, tags = true } }]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.4",
+]
