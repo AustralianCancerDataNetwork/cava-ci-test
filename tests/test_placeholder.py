@@ -9,5 +9,5 @@ def test_placeholder() -> None:
     assert 1 + 1 == 2
 
 def test_add() -> None:
-    from cava_ci_test import add as add_func
-    assert add_func(2, 3) == 5
+    from cava_ci_test import add
+    assert add(2, 3) == 5
