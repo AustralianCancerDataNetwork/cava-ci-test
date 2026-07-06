@@ -1,5 +1,6 @@
 name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
+commitish: main
 
 categories:
   - title: Breaking Changes
@@ -16,7 +17,7 @@ template: |
 
 change-template: |
   - **$TITLE** (#$NUMBER) by @$AUTHOR
-    $BODY
+  $BODY
 
 version-resolver:
   major:
