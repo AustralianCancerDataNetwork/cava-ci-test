@@ -6,8 +6,24 @@ on:
     tags: ['v*']
 
 jobs:
-  publish:
+  build:
     uses: AustralianCancerDataNetwork/cava-devops/.github/workflows/publish.yml@main
-    with:
-      repository-url: 'https://test.pypi.org/legacy/'
-      environment: 'testpypi'
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    environment:
+      name: testpypi
+      url: https://test.pypi.org/p/cava-ci-test
+
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
