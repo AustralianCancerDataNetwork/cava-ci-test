@@ -7,3 +7,7 @@ def test_import() -> None:
 
 def test_placeholder() -> None:
     assert 1 + 1 == 2
+
+def test_add() -> None:
+    from cava_ci_test import add
+    assert add(2, 3) == 5
