@@ -11,5 +11,6 @@ def multiply(x: int, y: int) -> int:
     return x * y
 
 def divide(x: int, y: int) -> float:
-    # add error on purpose so we can see the fix bit
+    if y == 0:
+        raise ValueError("Cannot divide by zero.")
     return x / y
