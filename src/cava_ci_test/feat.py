@@ -14,3 +14,7 @@ def divide(x: int, y: int) -> float:
     if y == 0:
         raise ValueError("Cannot divide by zero.")
     return x / y
+
+def modulus(x: int, y: int) -> int:
+    """Return the modulus of two integers. Dummy feature for testing CI/CD pipelines."""
+    return x % y

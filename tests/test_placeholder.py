@@ -27,3 +27,7 @@ def test_divide() -> None:
         divide(1, 0)
     except ValueError as e:
         assert str(e) == "Cannot divide by zero."
+
+def test_modulus() -> None:
+    from cava_ci_test import modulus
+    assert modulus(5, 3) == 2
