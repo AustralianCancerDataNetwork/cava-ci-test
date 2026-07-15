@@ -19,3 +19,11 @@ def test_subtract() -> None:
 def test_multiply() -> None:
     from cava_ci_test import multiply
     assert multiply(2, 3) == 6
+
+def test_divide() -> None:
+    from cava_ci_test import divide
+    assert divide(6, 3) == 2.0
+    try:
+        divide(1, 0)
+    except ValueError as e:
+        assert str(e) == "Cannot divide by zero."
