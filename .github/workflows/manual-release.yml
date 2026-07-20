@@ -14,6 +14,7 @@ on:
 
 jobs:
   release:
+    if: github.ref == 'refs/heads/main'
     uses: AustralianCancerDataNetwork/cava-devops/.github/workflows/manual-release.yml@main
     with:
       version: ${{ inputs.version }}
