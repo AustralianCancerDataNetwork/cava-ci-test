@@ -21,4 +21,5 @@ cache-keys = [{ file = "pyproject.toml" }, { git = { commit = true, tags = true 
 dev = [
     "pytest>=8.0",
     "ruff>=0.4",
+    "ty>=0.0.59",
 ]
