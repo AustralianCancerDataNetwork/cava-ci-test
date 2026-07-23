@@ -8,5 +8,13 @@ jobs:
   label-gate:
     uses: AustralianCancerDataNetwork/cava-devops/.github/workflows/label-gate.yml@main
 
+  # PILOT: temporarily pointed at cava-devops's feat/lowest-direct-dependabot
+  # branch to validate the new `resolution` input before it merges to main.
+  # Flip both jobs back to @main once the pilot passes.
   build-test:
-    uses: AustralianCancerDataNetwork/cava-devops/.github/workflows/build-test.yml@main
+    uses: AustralianCancerDataNetwork/cava-devops/.github/workflows/build-test.yml@feat/lowest-direct-dependabot
+
+  build-test-lowest-direct:
+    uses: AustralianCancerDataNetwork/cava-devops/.github/workflows/build-test.yml@feat/lowest-direct-dependabot
+    with:
+      resolution: lowest-direct
