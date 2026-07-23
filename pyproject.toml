@@ -16,7 +16,7 @@ dependencies = [
     # PILOT ONLY: throwaway dependency used to validate Dependabot's uv
     # ecosystem support end-to-end (see feat/lowest-direct-dependabot pilot).
     # Not a real dependency of this package -- remove once the pilot passes.
-    "certifi>=2024.2.2",
+    "certifi>=2026.7.22",
 ]
 
 [tool.uv]
