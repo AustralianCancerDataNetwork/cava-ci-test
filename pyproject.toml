@@ -16,7 +16,7 @@ dependencies = [
     # PILOT ONLY: throwaway dependency used to validate the --frozen CI
     # install and the uv.lock pre-commit hook end-to-end. Not a real
     # dependency of this package -- remove once the pilot passes.
-    "certifi>=2025.8.3",
+    "certifi>=2026.1.1",
 ]
 
 [tool.uv]
