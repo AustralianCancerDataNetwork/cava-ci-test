@@ -1,10 +1,10 @@
 """cava-ci-test: minimal package for validating cava-devops CI/CD pipelines."""
-from .feat import add, subtract, multiply, divide, modulus
+from .feat import add, divide, modulus, multiply, subtract
 
 __all__ = [
     "add",
-    "subtract",
-    "multiply",
     "divide",
     "modulus",
+    "multiply",
+    "subtract",
 ]
