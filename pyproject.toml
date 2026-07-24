@@ -13,15 +13,7 @@ description = "Minimal package for end-to-end validation of cava-devops CI/CD pi
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    # PILOT ONLY: throwaway dependency used to validate Dependabot's uv
-    # ecosystem support end-to-end (see feat/lowest-direct-dependabot pilot).
-    # Not a real dependency of this package -- remove once the pilot passes.
-    "certifi>=2025.8.3",
-    # PILOT ONLY: deliberately pinned to a version with a known advisory
-    # (same CVE-2026-4539 already tracked in omop-emb's pygments>=2.20.0
-    # comment) to validate Dependabot security updates end-to-end. Not a
-    # real dependency of this package -- remove once the pilot passes.
-    "pygments==2.19.2",
+    "certifi>=2026.1.1",
 ]
 
 [tool.uv]
