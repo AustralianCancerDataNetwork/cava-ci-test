@@ -17,6 +17,11 @@ dependencies = [
     # ecosystem support end-to-end (see feat/lowest-direct-dependabot pilot).
     # Not a real dependency of this package -- remove once the pilot passes.
     "certifi>=2025.8.3",
+    # PILOT ONLY: deliberately pinned to a version with a known advisory
+    # (same CVE-2026-4539 already tracked in omop-emb's pygments>=2.20.0
+    # comment) to validate Dependabot security updates end-to-end. Not a
+    # real dependency of this package -- remove once the pilot passes.
+    "pygments==2.19.2",
 ]
 
 [tool.uv]
